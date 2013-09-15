@@ -71,8 +71,6 @@ static int g_mouseClickX, g_mouseClickY; // coordinates for mouse click event
 static int g_activeShader = 0;
 // ============================================
 // TODO: you can add global variables below
-
-//~end of added global variables
 // ============================================
 
 
@@ -350,6 +348,16 @@ static void motion(const int x, const int y) {
   g_mouseClickY = g_windowHeight - y - 1;
 }
 
+static void reset()
+{
+	// =========================================================
+	// TODO:
+	// - reset g_skyRbt and g_objectRbt to their default values
+	// - reset the views and manipulation mode to default
+	// - reset sky camera mode to use the "world-sky" frame
+	// =========================================================
+	cout << "reset objects and modes to defaults" << endl;
+}
 
 static void mouse(const int button, const int state, const int x, const int y) {
   g_mouseClickX = x;
