@@ -51,7 +51,6 @@ using namespace tr1; // for shared_ptr
 // To complete the assignment you only need to edit the shader files that get
 // loaded
 // ----------------------------------------------------------------------------
-// Note: Mac OS X (Mountain Lion 10.8.x) does not support GLSL 1.3
 static const bool g_Gl2Compatible = false;
 
 
@@ -69,9 +68,9 @@ static bool g_mouseClickDown = false;    // is the mouse button pressed
 static bool g_mouseLClickButton, g_mouseRClickButton, g_mouseMClickButton;
 static int g_mouseClickX, g_mouseClickY; // coordinates for mouse click event
 static int g_activeShader = 0;
-// ============================================
-// TODO: you can add global variables below
-// ============================================
+// ========================================
+// TODO: you can add global variables here
+// ========================================
 
 
 struct ShaderState {
@@ -395,6 +394,14 @@ static void keyboard(const unsigned char key, const int x, const int y) {
   case 'f':
     g_activeShader ^= 1;
     break;
+  // ============================================================
+  // TODO: add the following functionality for 
+  //       keybaord inputs
+  // - 'v': cycle through the 3 views
+  // - 'o': cycle through the 3 objects being manipulated
+  // - 'm': switch between "world-sky" frame and "sky-sky" frame
+  // - 'r': reset the scene
+  // ============================================================
   }
   glutPostRedisplay();
 }
